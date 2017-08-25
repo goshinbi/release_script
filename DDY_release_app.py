@@ -12,7 +12,7 @@ from release_tools.filename_parsers import *
 script_dir = os.path.dirname(__file__)
 script_dir = os.path.abspath(script_dir)
 sys.path.append(script_dir)
-print('VERSION', sys.version)
+print('VERSION:', sys.version)
 config_path = os.path.join(script_dir, 'settings.json')
 print('CONFIG_PATH:', config_path)
 
