@@ -1,1 +1,1 @@
-# release_script
+run DDY_release_app_installer.py

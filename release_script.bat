@@ -1,0 +1,1 @@
+py -3 C:\Users\chris\Documents\DDY_release_script\DDY_release_app.py %*
