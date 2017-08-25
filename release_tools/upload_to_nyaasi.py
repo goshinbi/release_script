@@ -22,7 +22,7 @@ def upload_to_nyaasi(config, batch, hidden, torrent_path):
             '-p', passwd,
             '-c', '1_2',
             '-d', description,
-            '-i', information,
+            '-i', information
     ]
     if batch:
         command.append('--complete')    # how nyaasi handles batches
