@@ -10,7 +10,7 @@ def upload_to_anidex(config, batch, private, torrent_path):
     apikey = anidex['anidex_api_key']
     group_id = anidex['group_id']
     description = anidex['description']
-    anidex_script = path.join('release_tools', 'aniDex.py')
+    anidex_script = path.join('release_tools', 'AniDex.py')
 
     command = [
             'py',
@@ -22,7 +22,7 @@ def upload_to_anidex(config, batch, private, torrent_path):
             '-l', '1',
             '-g', group_id,
             '-d', description,
-            '--tt'
+			'--tt'
     ]
     if batch:
         command.append('--batch')

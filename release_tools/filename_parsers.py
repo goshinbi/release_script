@@ -9,18 +9,17 @@ def get_group(file):
     return group
 
 
-def get_anime_title(file):
-    print('FILE:', file, path.isfile(file), path.getsize(file))
+def get_anime_title(file, batch):
     if path.isfile(file):
         file = path.split(file)[-1]
         title_pattern = re.compile('\] (.+) - ')
+    elif batch:
+        file = path.split(file)[-1]
+        title_pattern = re.compile('\] (.+) \(')
     else:
         file = path.split(file)[-1]
-        print('FOLDER IS NOW:', file)
-        title_pattern = re.compile('\] (.+) \(')
+        title_pattern = re.compile('\] (.+) - ')
 
     title = title_pattern.findall(file)[0]
     return title
 
-
-print(get_anime_title('C:\\Users\\chris\\Downloads\\[testdesuyo] Anime Tenchou season 6 - 01 (BD 1920x1080 10bit FLAC).mkv'))

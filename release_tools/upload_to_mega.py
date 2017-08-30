@@ -3,9 +3,9 @@ from release_tools.mega import *
 from release_tools.filename_parsers import get_anime_title, get_group
 
 
-def upload_to_mega(config, mkv_path):
+def upload_to_mega(config, mkv_path, batch):
     group = get_group(mkv_path)
-    title = get_anime_title(mkv_path)
+    title = get_anime_title(mkv_path, batch)
     show = config['shows'][title]['groups'][group]
     mega = show['mega']
 

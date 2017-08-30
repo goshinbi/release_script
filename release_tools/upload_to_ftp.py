@@ -1,5 +1,4 @@
 import os.path as path
-import sys
 from release_tools.ftp import *
 from release_tools.filename_parsers import get_group
 
@@ -24,11 +23,6 @@ def put_up_release(url, user, passwd, mkv_src, mkv_dst, trt_src, trt_dst):
 
 
 def upload_to_ftp(config, mkv, torrent):
-    if not path.exists(torrent):
-        inp = input('No torrent found! Continue? y/n')
-        if inp != 'Y' and inp != 'y':
-            sys.exit()
-
     group = get_group(mkv)
 
     if group not in config['group']:

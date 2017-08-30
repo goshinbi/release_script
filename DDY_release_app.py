@@ -12,7 +12,7 @@ from release_tools.filename_parsers import *
 script_dir = os.path.dirname(__file__)
 script_dir = os.path.abspath(script_dir)
 sys.path.append(script_dir)
-print('VERSION:', sys.version)
+print('VERSION', sys.version)
 config_path = os.path.join(script_dir, 'settings.json')
 print('CONFIG_PATH:', config_path)
 
@@ -29,11 +29,11 @@ def write_config(config):
         json.dump(config, profile_file, indent=4)
 
 
-def update_mega(args, config):
+def update_mega(args, config, batch):
     print('updating mega')
 
     mkv_path = args.input
-    title = get_anime_title(mkv_path)
+    title = get_anime_title(mkv_path, batch)
     group = get_group(mkv_path)
 
     config['shows'][title]['groups'][group]['mega']['account'] = args.mega_account
@@ -92,22 +92,21 @@ def main():
     print('CWD:', os.getcwd())
     config = load_config()
     mkv_path = args.input
-
-    if mkv_path[-1] == chr(34):
-        mkv_path = mkv_path[0:-1]
-        print('changed mkv path')
-
-    torrent_path = path.abspath(mkv_path + '.torrent')
-
+    torrent_path = path.abspath(args.input + '.torrent')
     group = release_tools.get_group(mkv_path)
     magnet = "magnet not created"   # in case it doesn't get ran
     anidex_link = 'Not ran or received error'
     nyaasi_link = 'Not ran or received error'
     run_individual = args.mktorrent or args.magnet or args.ftp or args.mega or args.anidex or args.nyaasi
 
+
+    if mkv_path[-1] == chr(34):
+        mkv_path = mkv_path[0:-1]
+        print('fixed trailing slash on mkv path')
+
     if args.mega_account:
         fancy('MEGA_ACCOUNT')
-        update_mega(args, config)
+        update_mega(args, config, args.batch)
 
     if not run_individual or args.mktorrent:
         fancy('MKTORRENT')
@@ -124,7 +123,7 @@ def main():
 
     if not run_individual or args.mega:
         fancy('MEGA UPLOAD')
-        release_tools.upload_to_mega(config, mkv_path)
+        release_tools.upload_to_mega(config, mkv_path, args.batch)
 
     if not run_individual or args.anidex:
         anidex_output = release_tools.upload_to_anidex(config, args.batch, args.private, torrent_path)

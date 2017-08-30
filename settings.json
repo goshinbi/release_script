@@ -1,0 +1,89 @@
+{
+    "announces": {
+        "nyaasi": "http://nyaa.tracker.wf:7777/announce",
+        "anidex": "http://anidex.moe:6969/announce"
+    },
+    "shows": {
+        "ReZero kara Hajimeru Isekai Seikatsu": {
+			"groups": {
+                "BlurayDesuYo": {
+                    "wordpress tagline": "",
+                    "mega": {
+                        "account": "not_a_real_email@gmail.com",
+                        "pass": "not_a_real_password"
+                    }
+                },
+                "DameDesuYo": {
+                    "wordpress tagline": "",
+                    "mega": {
+                        "account": "not_a_real_email@gmail.com",
+                        "pass": "not_a_real_password"
+                    }
+                }
+            }
+        },
+        "Soushin Shoujo Matoi": {
+			"groups": {
+                "BlurayDesuYo": {
+                    "wordpress tagline": "",
+                    "mega": {
+                        "account": "not_a_real_email@gmail.com",
+                        "pass": "not_a_real_password"
+                    }
+                },
+                "DameDesuYo": {
+                    "wordpress tagline": "",
+                    "mega": {
+                        "account": "not_a_real_email@gmail.com",
+                        "pass": "not_a_real_password"
+                    }
+                }
+            }
+        }
+    },
+    "group": {
+        "BlurayDesuYo": {
+            "ftp": {
+                "url": "FTP_host_url",
+                "username": "not_a_real_user_name",
+                "pass": "not_a_reall_password",
+                "torrent_folder": "not_a_real_path_to_the_not_porn",
+                "mkv_folder": "not_a_real_path_to_the_not_porn"
+            },
+            "nyaasi": {
+                "username": "user_name",
+                "pass": "not_a_real_password",
+				"information": "https:\/\/damedesuyo.com",
+                "description": "Come hang out in our [IRC](irc:\/\/irc.rizon.net\/DameDesuYo).\r\n\r\nOr join us on Discord [here](https:\/\/discord.gg\/0lOJVOJuqsVujEIy). \r\n\r\nWe\u2019re hiring! We\u2019re in need of skilled fansubbers. [Click here to apply!](http:\/\/damedesuyo.com\/?page_id=101)\r\n\r\nReminder: if you find problems with one of our releases, please let us know if we need to v2 or just help with batching. [PUBLIC QC](http:\/\/damedesuyo.com\/?page_id=1873)."
+            },
+            "anidex": {
+                "anidex_api_key": "kyaa~~ Don't look",
+                "group_id": "199",
+                "description": "Come hang out in our [url=irc:\/\/irc.rizon.net\/DameDesuYo]IRC[\/url].\r\n\r\nOr join us on Discord [url=https:\/\/discord.gg\/0lOJVOJuqsVujEIy]here[\/url].\r\n\r\nReminder: if you find problems with one of our releases, please let us know if we need to v2 or just help with batching. [url=http:\/\/damedesuyo.com\/?page_id=1873]PUBLIC QC[\/url]."
+            },
+            "comment": "Join the discussion at https:\/\/damedesuyo.com, https:\/\/discord.gg\/0lOJVOJuqsVujEIy, and #damedesuyo on Rizon IRC"
+        },
+        "default": {
+            "ftp": {
+                "url": "FTP_host",
+                "username": "user_name",
+                "pass": "not_a_real_password",
+                "torrent_folder": "not_a_real_path_to_the_not_porn",
+                "mkv_folder": "not_a_real_path_to_the_not_porn"
+            },
+            "nyaasi": {
+                "username": "user_name",
+                "pass": "not_a_real_password",
+				"information": "https:\/\/damedesuyo.com",
+                "description": "Come hang out in our [IRC](irc:\/\/irc.rizon.net\/DameDesuYo).\r\n\r\nOr join us on Discord [here](https:\/\/discord.gg\/0lOJVOJuqsVujEIy). \r\n\r\nWe\u2019re hiring! We\u2019re in need of skilled fansubbers. [Click here to apply!](http:\/\/damedesuyo.com\/?page_id=101)\r\n\r\nReminder: if you find problems with one of our releases, please let us know if we need to v2 or just help with batching. [PUBLIC QC](http:\/\/damedesuyo.com\/?page_id=1873)."
+            },
+            "anidex": {
+                "anidex_api_key": "kyaa~~ Don't look",
+                "group_id": "199",
+                "description": "Come hang out in our [url=irc:\/\/irc.rizon.net\/DameDesuYo]IRC[\/url].\r\n\r\nOr join us on Discord [url=https:\/\/discord.gg\/0lOJVOJuqsVujEIy]here[\/url].\r\n\r\nReminder: if you find problems with one of our releases, please let us know if we need to v2 or just help with batching. [url=http:\/\/damedesuyo.com\/?page_id=1873]PUBLIC QC[\/url]."
+            },
+            "comment": "Join the discussion at https:\/\/damedesuyo.com, https:\/\/discord.gg\/0lOJVOJuqsVujEIy, and #damedesuyo on Rizon IRC"
+        }
+    },
+    "default_mega_pass": "kyaa~~ Don't look"
+}

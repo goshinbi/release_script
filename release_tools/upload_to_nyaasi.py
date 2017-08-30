@@ -7,10 +7,10 @@ def upload_to_nyaasi(config, batch, hidden, torrent_path):
     group = get_group(torrent_path)
     # description?
     nyaasi = config['group'][group]['nyaasi']
-    information = nyaasi['information']
 
     user = nyaasi['username']
     passwd = nyaasi['pass']
+    information = nyaasi['information']
     description = nyaasi['description']
     nyaasi_script = path.join('release_tools', 'api_uploader_v2.py')
 
@@ -21,8 +21,8 @@ def upload_to_nyaasi(config, batch, hidden, torrent_path):
             '-u', user,
             '-p', passwd,
             '-c', '1_2',
+            '-i', information,
             '-d', description,
-            '-i', information
     ]
     if batch:
         command.append('--complete')    # how nyaasi handles batches

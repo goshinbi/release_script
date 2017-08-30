@@ -7,17 +7,15 @@ def file_size(file):
     return path.getsize(file)
 
 
-def space_used():
+def space_left():
     command = ['MEGAclient', 'du']
-    output = subprocess.check_output(command).decode('utf-8')
-    print('OUTPUT:', output)
-    return int(re.compile('\d+').findall(output)[0])
+    return int(re.compile('\d+').findall(subprocess.check_output(command).decode('utf-8'))[0])
 
 
 def sufficient_space(file):
-    used = space_used()
+    space = space_left()
     size = file_size(file)
-    return size + used < 53687091000
+    return space > size
 
 
 def mega_put(src, title=None):
