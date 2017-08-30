@@ -1,5 +1,5 @@
 # DDY Distro v2 Process
-#### If you are releasing a show that hasn't been released with the v2 tool, complete the following. Otherwise skip to step 4.
+#### If you are releasing a show that hasn't been released with the tool, complete the following. Otherwise skip to step 2.
 
 ## 1. Copy the below json template section.
 
