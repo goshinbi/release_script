@@ -54,7 +54,7 @@ The script accepts parameters for individual actions.. It also includes "batch" 
 
 Note that Nyaa.si's and Anidex's private mode work differently. For Anidex, a private torrent can only be seen by accounts listed as "Staff" on the site.
 
-## ======================================================
+## =====================================================
 
 ## The help file is below.
 
