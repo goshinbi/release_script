@@ -1,5 +1,10 @@
-# DDY Distro v2 Process
-#### If you are releasing a show that hasn't been released with the tool, complete the following. Otherwise skip to step 2.
+## This includes copies of anidex.py and api_uploader_v2.py you can find links to both of the github pages below
+https://github.com/Golumpa/AniDexPy
+https://github.com/nyaadevs/nyaa/blob/master/utils/api_uploader_v2.py
+
+
+# DDY Distro Process
+#### If you are releasing a show that hasn't been released with the tool, complete the following. Otherwise skip to step 3.
 
 ## 1. Copy the below json template section.
 
@@ -24,19 +29,19 @@
 
 ## 2. Edit the settings.json file with notepad++. ( Or vim like a real nerd ;3 )
 
-### 3a. Add a comma after the last show added's final }.
-### 3b. Paste the template in after the last show added.
-### 3c. Fill in the details for show name, mega account and password. Group names can be modified if needed. May include more than 2 as well.
-### 3d. Save the file.
+### 2a. Add a comma after the last show added's final }.
+### 2b. Paste the template in after the last show added.
+### 2c. Fill in the details for show name, mega account and password. Group names can be modified if needed. May include more than 2 as well.
+### 2d. Save the file.
 
-## 4.  Open a command prompt. enter the following commands, each followed by clicking "enter".
+## 3.  Open a command prompt. enter the following commands, each followed by clicking "enter".
 
 ```
     cd E:\distro
-	release_script "[full path to file\folder]"
+    release_script "[full path to file\folder]"
 ```
 
-### 4a. for example:
+### 4. for example:
 ```
 	release_script "E:\DDY\BDs\Soushin Shoujo Matoi\[BlurayDesuYo] Soushin Shoujo Matoi - Vol. 2 (BD 1920x1080 10bit FLAC)"
 ```
@@ -44,7 +49,8 @@
 ## 6. Click "enter" to copy the links.
 ## 7. Paste the links somewhere so you can add them to your blog post.
 
-Caveats:
+# Caveats:
+
 	If uploading a folder, do not include a \ at the end of the file path. It will break things.
 	The Mega upload portion creates a folder at the root of the Mega account by the show title (pulled from the files) if one does not already exist. You may have to move existing files from before this tool was created to the new folder. May be fixed in a later version of the distro app.
 	If uploading a folder, the Mega upload portion just uploads to the root of the Mega account. You may have to move the files to the appropriate directory. May be fixed in a later version of the distro app.
